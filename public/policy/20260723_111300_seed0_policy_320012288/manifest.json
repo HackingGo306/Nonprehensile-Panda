@@ -1,0 +1,418 @@
+{
+  "format_version": 1,
+  "policy_id": "20260723_111300_seed0_policy_320012288",
+  "weights_file": "weights.bin",
+  "arrays": [
+    {
+      "name": "observation_mean",
+      "shape": [
+        129
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 0,
+      "byte_length": 516
+    },
+    {
+      "name": "observation_variance",
+      "shape": [
+        129
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 516,
+      "byte_length": 516
+    },
+    {
+      "name": "observation_count",
+      "shape": [
+        129
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 1032,
+      "byte_length": 516
+    },
+    {
+      "name": "Dense_0.kernel",
+      "shape": [
+        129,
+        256
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 1548,
+      "byte_length": 132096
+    },
+    {
+      "name": "Dense_0.bias",
+      "shape": [
+        256
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 133644,
+      "byte_length": 1024
+    },
+    {
+      "name": "Dense_1.kernel",
+      "shape": [
+        256,
+        256
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 134668,
+      "byte_length": 262144
+    },
+    {
+      "name": "Dense_1.bias",
+      "shape": [
+        256
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 396812,
+      "byte_length": 1024
+    },
+    {
+      "name": "Dense_2.kernel",
+      "shape": [
+        256,
+        6
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 397836,
+      "byte_length": 6144
+    },
+    {
+      "name": "Dense_2.bias",
+      "shape": [
+        6
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 403980,
+      "byte_length": 24
+    },
+    {
+      "name": "actor_log_std",
+      "shape": [
+        6
+      ],
+      "dtype": "float32-le",
+      "byte_offset": 404004,
+      "byte_length": 24
+    }
+  ],
+  "actor": {
+    "layers": [
+      {
+        "kernel": "Dense_0.kernel",
+        "bias": "Dense_0.bias",
+        "activation": "tanh"
+      },
+      {
+        "kernel": "Dense_1.kernel",
+        "bias": "Dense_1.bias",
+        "activation": "tanh"
+      },
+      {
+        "kernel": "Dense_2.kernel",
+        "bias": "Dense_2.bias",
+        "activation": "tanh"
+      }
+    ],
+    "output_activation": "tanh"
+  },
+  "normalization": {
+    "epsilon": 1e-06,
+    "clip": [
+      -10,
+      10
+    ],
+    "validity": "version-2 box validity mask"
+  },
+  "policy_metadata": {
+    "action_size": 6,
+    "effective_belt_speed": 0.15,
+    "environment": {
+      "action_repeat": 25,
+      "belt_speed": 0.15,
+      "belt_speed_noise": 0.2,
+      "box_surface_friction": 0.9,
+      "joint_limit_margin": 0.05,
+      "joint_pose_noise": [
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2,
+        0.2
+      ],
+      "max_episode_seconds": 20.0,
+      "max_failures": 5,
+      "max_joint_pose_reset_attempts": 1000,
+      "model_path": "/Users/cameron/robotics/assets/mujoco_menagerie/franka_emika_panda/mjx_scene.xml",
+      "model_seed": 0,
+      "num_envs": 128,
+      "randomize_joint_poses": true,
+      "reward": {
+        "action_change": -0.01,
+        "action_magnitude": -0.005,
+        "correct_sort": 20.0,
+        "directed_progress": 4.0,
+        "hand_vertical_error": -0.0,
+        "hover_height_error": -1.0,
+        "joint_speed": -0.01,
+        "missed_box": -10.0,
+        "precontact_approach": 1.0,
+        "unsafe_box_motion": -1.0,
+        "unstable_simulation": -50.0,
+        "wrong_sort": -20.0
+      },
+      "spawn_interval": 0.75,
+      "spawn_interval_noise": 0.15
+    },
+    "environment_backend": "native",
+    "environment_id": "multi_box",
+    "environment_steps": 320012288,
+    "hidden_size": 256,
+    "observation_size": 129,
+    "observation_version": 2,
+    "resolved_stage": {
+      "belt_speed": 0.15,
+      "environment_id": "multi_box",
+      "max_active_boxes": 8,
+      "name": "multi_box_slow",
+      "reward_id": "slow_coordination",
+      "spawn_interval": 0.75,
+      "stage_id": 3
+    },
+    "reward_id": "slow_coordination",
+    "schema_version": 4,
+    "stage_definition": {
+      "belt_speed": 0.15,
+      "environment_id": "multi_box",
+      "max_active_boxes": 8,
+      "name": "multi_box_slow",
+      "reward_id": "slow_coordination",
+      "spawn_interval": 1.5,
+      "stage_id": 3
+    },
+    "stage_history": [
+      {
+        "activated_at_environment_steps": 0,
+        "stage": {
+          "belt_speed": 0.1,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 56033280,
+        "stage": {
+          "belt_speed": 0.12,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 60030976,
+        "stage": {
+          "belt_speed": 0.11,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 64028672,
+        "stage": {
+          "belt_speed": 0.12,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 66060288,
+        "stage": {
+          "belt_speed": 0.15,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 68026368,
+        "stage": {
+          "belt_speed": 0.16,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 72024064,
+        "stage": {
+          "belt_speed": 0.18,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 74055680,
+        "stage": {
+          "belt_speed": 0.2,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 100007936,
+        "stage": {
+          "belt_speed": 0.2,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.0,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 105054208,
+        "stage": {
+          "belt_speed": 0.22,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.75,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 110034944,
+        "stage": {
+          "belt_speed": 0.22,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.7,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 112001024,
+        "stage": {
+          "belt_speed": 0.22,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.5,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 114032640,
+        "stage": {
+          "belt_speed": 0.2,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.2,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 120061952,
+        "stage": {
+          "belt_speed": 0.2,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 1.0,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 130023424,
+        "stage": {
+          "belt_speed": 0.2,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.9,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 135004160,
+        "stage": {
+          "belt_speed": 0.175,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.8,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 142016512,
+        "stage": {
+          "belt_speed": 0.15,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.8,
+          "stage_id": 3
+        }
+      },
+      {
+        "activated_at_environment_steps": 175046656,
+        "stage": {
+          "belt_speed": 0.15,
+          "environment_id": "multi_box",
+          "max_active_boxes": 8,
+          "name": "multi_box_slow",
+          "reward_id": "slow_coordination",
+          "spawn_interval": 0.75,
+          "stage_id": 3
+        }
+      }
+    ],
+    "stage_id": 3,
+    "stage_name": "multi_box_slow"
+  },
+  "source_policy": "checkpoints/conveyor_native_ppo/20260723_111300_seed0/policy.msgpack",
+  "training_state_provenance": "checkpoints/conveyor_native_ppo/20260723_111300_seed0/step_000214040576 (historical, non-authoritative)"
+}

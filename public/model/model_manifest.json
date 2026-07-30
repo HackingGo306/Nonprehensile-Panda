@@ -1,0 +1,293 @@
+{
+  "format_version": 1,
+  "mujoco_version": "3.11.0",
+  "model_file": "native_scene.xml",
+  "nq": 93,
+  "nv": 81,
+  "nu": 8,
+  "timestep": 0.002,
+  "controlled_joint_qpos_addresses": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "controlled_joint_qvel_addresses": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "locked_joint_qpos_addresses": [
+    6,
+    7,
+    8
+  ],
+  "box_body_ids": [
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "box_geom_ids": [
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112
+  ],
+  "box_qpos_addresses": [
+    9,
+    16,
+    23,
+    30,
+    37,
+    44,
+    51,
+    58,
+    65,
+    72,
+    79,
+    86
+  ],
+  "box_qvel_addresses": [
+    9,
+    15,
+    21,
+    27,
+    33,
+    39,
+    45,
+    51,
+    57,
+    63,
+    69,
+    75
+  ],
+  "push_site_id": 0,
+  "hand_geom_id": 84,
+  "conveyor_surface_geom_id": 100,
+  "wrist_body_id": 8,
+  "joint_low": [
+    -2.8973,
+    -1.7628,
+    -2.8973,
+    -3.0718,
+    -2.8973,
+    -0.0175
+  ],
+  "joint_high": [
+    2.8973,
+    1.7628,
+    2.8973,
+    -0.0698,
+    2.8973,
+    3.7525
+  ],
+  "box_half_extents": [
+    [
+      0.05047846749285818,
+      0.03309360141291611,
+      0.021638940957447787
+    ],
+    [
+      0.025661105421141164,
+      0.04939810717600817,
+      0.05651022309110886
+    ],
+    [
+      0.049265431030687194,
+      0.046884896829519955,
+      0.04174499965861691
+    ],
+    [
+      0.06240289695151073,
+      0.04947560662364597,
+      0.020109540006805923
+    ],
+    [
+      0.059296171063502774,
+      0.026007567259163932,
+      0.04918621785719776
+    ],
+    [
+      0.03202622482410236,
+      0.0508953676704966,
+      0.041658448809963666
+    ],
+    [
+      0.03698847562149539,
+      0.03768061663592975,
+      0.02113278684581852
+    ],
+    [
+      0.02997133105998256,
+      0.04511873244080891,
+      0.04588758046297
+    ],
+    [
+      0.049615404459250154,
+      0.036510326627856506,
+      0.05988839743156844
+    ],
+    [
+      0.06423341355104921,
+      0.04556625953442084,
+      0.04601837105071265
+    ],
+    [
+      0.0525378692228376,
+      0.03666764271937312,
+      0.02540386020089645
+    ],
+    [
+      0.05385953360776327,
+      0.04076062967427178,
+      0.032409675022358225
+    ]
+  ],
+  "target_bins": [
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1,
+    0,
+    1
+  ],
+  "sorting_bin_regions": [
+    {
+      "target_bin": 0,
+      "x_min": 0.51,
+      "x_max": 1.66,
+      "y_min": 0.264,
+      "y_max": 0.544
+    },
+    {
+      "target_bin": 1,
+      "x_min": 0.010000000000000009,
+      "x_max": 1.66,
+      "y_min": -0.544,
+      "y_max": -0.264
+    }
+  ],
+  "panda_home_qpos": [
+    0.0,
+    0.0,
+    0.0,
+    -1.57079,
+    0.0,
+    1.57079,
+    -0.7853,
+    0.04,
+    0.04
+  ],
+  "panda_home_ctrl": [
+    0.0,
+    0.0,
+    0.0,
+    -1.57079,
+    0.0,
+    1.57079,
+    -0.7853,
+    0.04
+  ],
+  "native_collision": {
+    "robot_group": 3,
+    "workspace_bit": 4,
+    "box_bit": 8
+  },
+  "asset_files": [
+    "assets/finger_0.obj",
+    "assets/finger_1.obj",
+    "assets/hand.stl",
+    "assets/hand_0.obj",
+    "assets/hand_1.obj",
+    "assets/hand_2.obj",
+    "assets/hand_3.obj",
+    "assets/hand_4.obj",
+    "assets/link0.stl",
+    "assets/link0_0.obj",
+    "assets/link0_1.obj",
+    "assets/link0_10.obj",
+    "assets/link0_11.obj",
+    "assets/link0_2.obj",
+    "assets/link0_3.obj",
+    "assets/link0_4.obj",
+    "assets/link0_5.obj",
+    "assets/link0_7.obj",
+    "assets/link0_8.obj",
+    "assets/link0_9.obj",
+    "assets/link1.obj",
+    "assets/link1.stl",
+    "assets/link2.obj",
+    "assets/link2.stl",
+    "assets/link3.stl",
+    "assets/link3_0.obj",
+    "assets/link3_1.obj",
+    "assets/link3_2.obj",
+    "assets/link3_3.obj",
+    "assets/link4.stl",
+    "assets/link4_0.obj",
+    "assets/link4_1.obj",
+    "assets/link4_2.obj",
+    "assets/link4_3.obj",
+    "assets/link5_0.obj",
+    "assets/link5_1.obj",
+    "assets/link5_2.obj",
+    "assets/link5_collision_0.obj",
+    "assets/link5_collision_1.obj",
+    "assets/link5_collision_2.obj",
+    "assets/link6.stl",
+    "assets/link6_0.obj",
+    "assets/link6_1.obj",
+    "assets/link6_10.obj",
+    "assets/link6_11.obj",
+    "assets/link6_12.obj",
+    "assets/link6_13.obj",
+    "assets/link6_14.obj",
+    "assets/link6_15.obj",
+    "assets/link6_16.obj",
+    "assets/link6_2.obj",
+    "assets/link6_3.obj",
+    "assets/link6_4.obj",
+    "assets/link6_5.obj",
+    "assets/link6_6.obj",
+    "assets/link6_7.obj",
+    "assets/link6_8.obj",
+    "assets/link6_9.obj",
+    "assets/link7.stl",
+    "assets/link7_0.obj",
+    "assets/link7_1.obj",
+    "assets/link7_2.obj",
+    "assets/link7_3.obj",
+    "assets/link7_4.obj",
+    "assets/link7_5.obj",
+    "assets/link7_6.obj",
+    "assets/link7_7.obj"
+  ]
+}

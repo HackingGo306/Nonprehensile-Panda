@@ -1,0 +1,29 @@
+{
+  "name": "static-mujoco-stage3-demo",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepare:model": "python3 tools/prepare_model.py --repo-root ../robotics --source ../robotics/assets/mujoco_menagerie/franka_emika_panda/mjx_scene.xml --output public/model --model-seed 0 --box-surface-friction 0.9",
+    "export:contract": "python3 tools/export_contract.py --repo-root ../robotics --output public/contract.json --stage 3",
+    "export:policy": "python3 tools/export_policy.py --repo-root ../robotics --policy ../robotics/checkpoints/conveyor_native_ppo/20260723_111300_seed0/policy.msgpack --output public/policy/20260723_111300_seed0_policy_375062528 --stage 3 --demo-settings-from public/policy/20260723_111300_seed0_policy_320012288/manifest.json",
+    "test:reference": "python3 tools/generate_reference_fixtures.py --repo-root ../robotics --output fixtures/python-reference/stage3_seed0.json --policy ../robotics/checkpoints/conveyor_native_ppo/20260723_111300_seed0/policy.msgpack --demo-settings-from public/policy/20260723_111300_seed0_policy_320012288/manifest.json"
+  },
+  "dependencies": {
+    "@mujoco/mujoco": "3.10.0",
+    "three": "^0.183.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.0",
+    "@types/three": "^0.183.0",
+    "jsdom": "^28.1.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vitest": "^4.0.18"
+  }
+}
