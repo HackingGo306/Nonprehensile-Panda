@@ -2,7 +2,12 @@ import type { MainModule } from '@mujoco/mujoco';
 import { createHandle, getMujoco } from './mujoco-runtime';
 import type { ActivePolicy, Contract, LoadedDemo, ModelManifest, ModelPatch } from './types';
 
-const asset = (path: string) => `${import.meta.env.BASE_URL}${path}`;
+// This module runs inside the simulation worker after production bundling.  A
+// relative URL such as `./model/...` would therefore resolve relative to
+// `/assets/simulation-worker-*.js`, rather than the site root.  Resolve against
+// a stable synthetic origin and retain only the pathname so every static asset
+// is requested from the Vite/Workers asset root.
+const asset = (path: string) => new URL(`${import.meta.env.BASE_URL}${path}`, 'https://asset-root.invalid/').pathname;
 const yieldToBrowser = (): Promise<void> => typeof window === 'undefined' ? Promise.resolve() : new Promise((resolve) => window.requestAnimationFrame(() => resolve()));
 
 async function json<T>(path: string): Promise<T> {
