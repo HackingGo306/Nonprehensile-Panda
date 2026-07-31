@@ -1,4 +1,4 @@
-# Conveyor Policy Player
+# [Conveyor Policy Player](https://panda.cameronjiang.dev/)
 
 This website is an interactive browser demo of a robotic arm sorting packages from a moving conveyor into color-coded bins. It pairs a trained control policy with a realistic MuJoCo scene, letting you adjust the conveyor and spawning pace while watching the robot work.
 
